@@ -4,24 +4,24 @@ require_once "conexion.php";
 // Verificar que se envíe por método POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Sanitizar datos
+    // Obtengo los datos ingresados por el usuario
     $nombre = trim($_POST["nombre"]);
     $correo = trim($_POST["correo"]);
     $mensaje = trim($_POST["mensaje"]);
 
-    // Validar campos vacíos
+    // Verifico que los campos no estén vacíos
     if (empty($nombre) || empty($correo) || empty($mensaje)) {
         die("Todos los campos son obligatorios.");
     }
 
-    // Validar correo
+    // Verifico que el correo tenga un formato válido
     if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
         die("El correo electrónico no es válido.");
     }
 
     try {
 
-        // Consulta segura (prepared statement)
+        // Inserto el nuevo usuario en la base de datos 
         $sql = "INSERT INTO contacto (nombre, correo, mensaje)
                 VALUES (:nombre, :correo, :mensaje)";
 
@@ -60,22 +60,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Esto ya ni es de comentarlo, pero es este link hace referencia a los estilos css que tengo. -->
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <!-- Este es mi barra de navegación principal así como en la tarea del semestre pasado.  --> 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">Mi Perfil</a>
 
-            <button class="navbar-toggler" type="button"
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Este es mi barra de navegación principal así como en la tarea del semestre pasado. -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.php">
+                Mi Perfil Personal
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#menu">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
             <div class="collapse navbar-collapse" id="menu">
+
                 <ul class="navbar-nav ms-auto">
+
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Inicio</a>
+                        <a class="nav-link" href="index.php">
+                            Inicio
+                        </a>
                     </li>
 
                     <li class="nav-item">
@@ -83,21 +96,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             Contacto
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.php">
+                            Registros
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </nav>
-    
+
     <main class="container mt-5 flex-grow-1">
-         <div class="row justify-content-center">
 
-            <div class="col-md-6 col-lg-5">
+        <div class="row justify-content-center">
 
-                <div class="card shadow p-5 text-center">
+            <div class="col-lg-5 col-md-7">
 
-                    <h1 class="mb-4">
+                <div class="card shadow-sm p-4 text-center">
+
+                    <h2 class="mb-4">
                         Confirmación
-                    </h1>
+                    </h2>
 
                     <div class="alert alert-info">
 
@@ -131,14 +155,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
     </main>
-    <!-- Pie de página-->
 
-    <footer class="text-white text-center mt-5 p-3">
+    <!-- Pie de página -->
+    <footer class="text-white text-center py-3 mt-5">
+
         <p class="mb-0">
-        Perfil Personal - Tecnologías Web
-    </p>
+            Perfil Personal - Tecnologías Web
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 </body>
+</html>

@@ -11,10 +11,12 @@
     <!-- Esto ya ni es de comentarlo, pero es este link hace referencia a los estilos css que tengo. -->
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
+
 <body>
 
-    <!-- Este es mi barra de navegación principal así como en la tarea del semestre pasado.  -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Este es mi barra de navegación principal así como en la tarea del semestre pasado. -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
+
         <div class="container">
 
             <a class="navbar-brand" href="index.php">
@@ -27,9 +29,11 @@
                 data-bs-target="#menu">
 
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
             <div class="collapse navbar-collapse" id="menu">
+
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
@@ -44,28 +48,36 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.php">
+                            Registros
+                        </a>
+                    </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </nav>
 
-    <!-- Formulario -->
     <main class="container mt-5">
 
         <div class="row justify-content-center">
 
-            <div class="col-md-6 col-lg-5">
+            <div class="col-lg-5 col-md-7">
 
-                <div class="card shadow p-4">
+                <div class="card shadow-sm p-4 formulario-card">
 
-                    <h1 class="text-center mb-4">
+                    <h2 class="text-center mb-4">
                         Formulario de Contacto
-                    </h1>
+                    </h2>
 
                     <form action="validar_contacto.php" method="POST">
 
-                        <!-- Nombre -->
                         <div class="mb-3">
+
                             <label for="nombre" class="form-label">
                                 Nombre
                             </label>
@@ -78,10 +90,11 @@
                                 required
                                 maxlength="100"
                                 placeholder="Ingrese su nombre">
+
                         </div>
 
-                        <!-- Correo -->
                         <div class="mb-3">
+
                             <label for="correo" class="form-label">
                                 Correo electrónico
                             </label>
@@ -94,10 +107,11 @@
                                 required
                                 maxlength="100"
                                 placeholder="ejemplo@correo.com">
+
                         </div>
 
-                        <!-- Mensaje -->
                         <div class="mb-3">
+
                             <label for="mensaje" class="form-label">
                                 Mensaje
                             </label>
@@ -106,18 +120,23 @@
                                 class="form-control"
                                 id="mensaje"
                                 name="mensaje"
-                                rows="5"
+                                rows="3"
                                 required
                                 maxlength="500"
                                 placeholder="Escriba un mensaje"></textarea>
+
                         </div>
 
                         <div class="text-center">
-                            <button type="submit"
-                                class="btn btn-primary">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary px-4">
 
                                 Enviar mensaje
+
                             </button>
+
                         </div>
 
                     </form>
@@ -129,13 +148,18 @@
         </div>
 
     </main>
-
     <!-- Pie de página -->
-    <footer class="text-white text-center mt-5 p-3">
+<footer class="text-white text-center py-3 mt-5">
+
+    <div class="container">
+
         <p class="mb-0">
             Perfil Personal - Tecnologías Web
         </p>
-    </footer>
+
+    </div>
+
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 

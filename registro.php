@@ -30,32 +30,50 @@ try {
     <!-- Esto ya ni es de comentarlo, pero es este link hace referencia a los estilos css que tengo. -->
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
+
 <body>
 
-    <!-- Este es mi barra de navegación principal así como en la tarea del semestre pasado.  --> 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Este es mi barra de navegación principal así como en la tarea del semestre pasado. -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow">
 
         <div class="container">
 
-            <a class="navbar-brand"
-               href="index.php">
-
+            <a class="navbar-brand" href="index.php">
                 Mi Perfil
             </a>
 
-            <div class="ms-auto">
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
 
-                <a href="index.php"
-                   class="btn btn-outline-light me-2">
+                <span class="navbar-toggler-icon"></span>
 
-                    Inicio
-                </a>
+            </button>
 
-                <a href="contacto.php"
-                   class="btn btn-outline-light">
+            <div class="collapse navbar-collapse" id="menu">
 
-                    Contacto
-                </a>
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.php">
+                            Contacto
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="registro.php">
+                            Registros
+                        </a>
+                    </li>
+
+                </ul>
 
             </div>
 
@@ -67,21 +85,22 @@ try {
 
         <div class="row justify-content-center">
 
-            <div class="col-lg-10 col-md-11">
+            <div class="col-lg-9">
 
-                <div class="card shadow p-4">
+                <div class="card shadow-sm p-4">
 
-                    <h1 class="text-center mb-4">
+                    <h2 class="text-center mb-4">
                         Historial de mensajes
-                    </h1>
+                    </h2>
 
                     <?php if (count($registros) > 0): ?>
 
                         <div class="table-responsive">
 
-                            <table class="table table-bordered table-hover">
+                            <table class="table table-hover align-middle">
 
-                                <thead class="table-dark">
+                                <thead class="table-primary">
+
                                     <tr>
                                         <th>ID</th>
                                         <th>Nombre</th>
@@ -89,6 +108,7 @@ try {
                                         <th>Mensaje</th>
                                         <th>Fecha</th>
                                     </tr>
+
                                 </thead>
 
                                 <tbody>
@@ -96,6 +116,7 @@ try {
                                 <?php foreach ($registros as $fila): ?>
 
                                     <tr>
+
                                         <td>
                                             <?php echo htmlspecialchars($fila['id']); ?>
                                         </td>
@@ -115,6 +136,7 @@ try {
                                         <td>
                                             <?php echo htmlspecialchars($fila['fecha_registro']); ?>
                                         </td>
+
                                     </tr>
 
                                 <?php endforeach; ?>
@@ -141,12 +163,15 @@ try {
 
     </main>
 
-    <!-- Pie de oágina -->
-    <footer class="text-white text-center mt-5 p-3">
+    <!-- Pie de página -->
+    <footer class="text-white text-center py-3 mt-5">
+
         <p class="mb-0">
             Perfil Personal - Tecnologías Web
         </p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

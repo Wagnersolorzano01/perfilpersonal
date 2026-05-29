@@ -1,57 +1,24 @@
-/* Estilo del Cuerpo*/
+/* Estilo general de la página */
 body{
-    background-color: #dbeafe;
+    background-color: #f5f7fb;
     font-family: Arial, sans-serif;
-    color: #1e293b;
-
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    color: #1f2937;
 }
 
-main{
-    flex: 1;
-}
-
-/* Mi cabecera= */
-
+/* Personalización de la barra de navegación */
 .navbar{
-    background-color: #dbeafe !important;
+    background-color: #628ce6 !important;
 }
-
 /* Estilos pie de página */
 footer{
-    background-color: #dbeafe !important;
-    color: white !important;
+    background-color: #628ce6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-main{
-    flex: 1;
+/* Diseño de las tarjetas de contenido */
+.card{
+    border: none;
+    border-radius: 15px;
 }
-
-/* ===== HEADER ===== */
-
-.navbar{
-    background-color: #2563eb !important;
-}
-
-/* ===== FOOTER ===== */
-footer{
-    background-color: #2563eb !important;
-    color: white !important;
+/* Encabezados principales y secundarios */
+h2, h3, h4{
+    font-weight: 600;
 }

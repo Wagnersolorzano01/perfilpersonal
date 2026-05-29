@@ -1,9 +1,10 @@
 <?php
 
-$host = "sql302.infinityfree.com";
-$bd = "if0_42049473_usuarios";
-$usuario = "if0_42049473";
-$contrasena = "zDIYevCGDA1";
+$host = "localhost";
+$bd = "usuarios";
+$usuario = "root";
+$contrasena = "";
+
 
 try {
 
