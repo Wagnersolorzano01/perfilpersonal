@@ -1,0 +1,57 @@
+/* Estilo del Cuerpo*/
+body{
+    background-color: #dbeafe;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
+/* Mi cabecera= */
+
+.navbar{
+    background-color: #dbeafe !important;
+}
+
+/* Estilos pie de página */
+footer{
+    background-color: #dbeafe !important;
+    color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+    flex: 1;
+}
+
+/* ===== HEADER ===== */
+
+.navbar{
+    background-color: #2563eb !important;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background-color: #2563eb !important;
+    color: white !important;
+}
