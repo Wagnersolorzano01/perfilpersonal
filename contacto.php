@@ -48,12 +48,6 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="registro.php">
-                            Registros
-                        </a>
-                    </li>
-
                 </ul>
 
             </div>

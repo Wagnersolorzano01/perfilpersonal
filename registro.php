@@ -67,12 +67,6 @@ try {
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="registro.php">
-                            Registros
-                        </a>
-                    </li>
-
                 </ul>
 
             </div>

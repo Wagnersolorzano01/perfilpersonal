@@ -5,7 +5,6 @@ $bd = "usuarios";
 $usuario = "root";
 $contrasena = "";
 
-
 try {
 
     $conexion = new PDO(

@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container">
 
             <a class="navbar-brand" href="index.php">
-                Mi Perfil Personal
+                Mi Perfil 
             </a>
 
             <button class="navbar-toggler"
@@ -94,12 +94,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.php">
                             Contacto
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="registro.php">
-                            Registros
                         </a>
                     </li>
 

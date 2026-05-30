@@ -51,12 +51,6 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="registro.php">
-                        Registros
-                    </a>
-                </li>
-
             </ul>
 
         </div>
@@ -65,10 +59,9 @@
 
 </nav>
 
-<!-- Contenedor principal -->
+<!-- este es mi contenedor principal  -->
 <div class="container my-5">
 
-    <!-- Presentación -->
     <div class="text-center mb-5">
 
         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
@@ -116,7 +109,7 @@
 
     <!-- Hobbies -->
     <section class="mt-4">
-                <h2>Mis hobbies e intereses</h2>
+                <h2>Mis Hobbies e Intereses</h2>
 
                 <div class="row text-center mt-3">
 
